@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Myanmar Calendar</title>
+	<link rel="icon" type="image/ico" href="img/favicon.ico" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Padauk&display=swap" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
+	<link href="manifest.json" rel="manifest">
+</head>
+
+<body>
+	<div class="controls">
+		<input type="button" id="decm" value="&lt;" onclick="ChangeMonth(-1);" class="BtnDec" title="Previous Month">
+		<input type="number" id="year" min="640" max="2140" value="" onchange="LoadDate()" class="InpYear" title="Year">
+		<select id="month" onchange="LoadDate()" class="InpMonth" title="Month">
+			<option value="0">January</option>
+			<option value="1">February</option>
+			<option value="2">March</option>
+			<option value="3">April</option>
+			<option value="4">May</option>
+			<option value="5">June</option>
+			<option value="6">July</option>
+			<option value="7">August</option>
+			<option value="8">September</option>
+			<option value="9">October</option>
+			<option value="10">November</option>
+			<option value="11">December</option>
+		</select>
+		<input type="button" id="incm" value="&gt;" onclick="ChangeMonth(1);" class="BtnInc" title="Next Month">
+		<button class="today" onclick="SetToday()">Today</button>
+	</div>
+
+	<div class="calendar-container">
+		<div class="calendar-header" id="calenderHeader"></div>
+		<div class="calendar-body">
+			<div class="week-header" id="calendarWeekDay"></div>
+			<div id="calendarContent"></div>
+		</div>
+	</div>
+
+	<div id="dayInfoModal" class="modal d-none">
+		<div class="modal-header">
+			<label style="padding-left:10px;">Day Info</label>
+			<button class="close" id="modalClose">&times;</button>
+		</div>
+		<div class="modal-body" id="modalBody"></div>
+		<div class="modal-footer">
+			<a href="https://github.com/yan9a/mmcal/blob/master/index.htm" target="_blank">
+				The code is based on "yan9a-mmcal"
+			</a>
+		</div>
+	</div>
+	<div id="modalOverlay" class="modal-backdrop d-none"></div>
+	<script src="calendar.js"></script>
+	<script>
+		if('serviceWorker' in navigator) {
+		  navigator.serviceWorker.register('sw.js', { scope: '/' });
+		}
+	</script>
+</body>
+
+</html>

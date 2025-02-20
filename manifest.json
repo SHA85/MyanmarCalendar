@@ -1,0 +1,17 @@
+{
+    "lang": "en-us",
+    "name": "Myanmar Calendar App",
+    "short_name": "Myanmar Calendar",
+    "description": "A calendar app with Myanmar Date and Sabbath date calculation and holiday also.",
+    "start_url": "/",
+    "background_color": "#2f3d58",
+    "theme_color": "#2f3d58",
+    "orientation": "portrait",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "img/myanmar_calendar.png",
+            "sizes": "512x512"
+        }
+    ]
+}
