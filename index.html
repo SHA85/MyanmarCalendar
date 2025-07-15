@@ -57,9 +57,9 @@
 	<div id="modalOverlay" class="modal-backdrop d-none"></div>
 	<script src="calendar.js"></script>
 	<script>
-		if('serviceWorker' in navigator) {
-		  navigator.serviceWorker.register('sw.js', { scope: '/' });
-		}
+		document.addEventListener('DOMContentLoaded', () => {
+		  	navigator.serviceWorker.register('./sw.js', { scope: './' });
+		});
 	</script>
 </body>
 
