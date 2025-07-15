@@ -49,12 +49,12 @@ const ShortThingyanHolidays = ["အကြို", "အကျ", "အကြတ်"
 const FullEnHolidays = ["နိုင်ငံတကာနှစ်သစ်ကူးနေ့", "လွတ်လပ်ရေးနေ့", "ပြည်ထောင်စုနေ့", "တောင်သူလယ်သမားနေ့", "တော်လှန်ရေးနေ့", "အလုပ်သမားနေ့", "အာဇာနည်နေ့", "ခရစ္စမတ်နေ့"];
 const FullMmHolidays = ["ကဆုန်လပြည့် (ဗုဒ္ဓနေ့)", "ဝါဆိုလပြည့်", "သီတင်းကျွတ်လပြည့်", "တန်ဆောင်တိုင်", "အမျိုးသားနေ့", "ကရင်နှစ်သစ်ကူး", "တပေါင်းလပြည့်"];
 
-window.onload = function () {
-    const now = new Date();
-    yearElement.value = now.getFullYear(); // 2025
-    monthElement.value = now.getMonth(); // 0 - 11
-    updateWindowSize();
-};
+// window.onload = function () {
+//     const now = new Date();
+//     yearElement.value = now.getFullYear(); // 2025
+//     monthElement.value = now.getMonth(); // 0 - 11
+//     updateWindowSize();
+// };
 
 function SetToday() {
     const now = new Date();

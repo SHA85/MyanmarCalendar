@@ -30,6 +30,10 @@ self.addEventListener('fetch', event => {
           return fetchResponse;
         } catch (e) {
           // The network failed.
+          return new Response('Network error occurred', {
+            status: 408,
+            statusText: 'Network error'
+          });
         }
     }
   })());

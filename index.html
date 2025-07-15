@@ -7,9 +7,9 @@
 	<title>Myanmar Calendar</title>
 	<link rel="icon" type="image/ico" href="img/favicon.ico" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Padauk&display=swap" rel="stylesheet">
 	<link href="style.css" rel="stylesheet">
 	<link href="manifest.json" rel="manifest">
+	<link href="https://fonts.googleapis.com/css2?family=Padauk&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -55,10 +55,14 @@
 		</div>
 	</div>
 	<div id="modalOverlay" class="modal-backdrop d-none"></div>
-	<script src="calendar.js"></script>
+	<script src="./calendar.js"></script>
 	<script>
 		document.addEventListener('DOMContentLoaded', () => {
 		  	navigator.serviceWorker.register('./sw.js', { scope: './' });
+			const now = new Date();
+			yearElement.value = now.getFullYear(); // 2025
+			monthElement.value = now.getMonth(); // 0 - 11
+			updateWindowSize();
 		});
 	</script>
 </body>
